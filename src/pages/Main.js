@@ -8,6 +8,7 @@ const Main = () => {
             <h1>cicd테스트</h1>
             <h1>cicd테스트</h1>
             <h1>cicd테스트</h1>
+            <h1>cicd테스트</h1>
         </>
     );
 };
