@@ -1,12 +1,10 @@
 import React from 'react';
+import MainList from '../components/main/MainList';
 
 const Main = () => {
     return (
         <>
-            <div>메인페이지입니다.!!!!!!!</div>
-            <div>시키는대로 했어 난..</div>
-            <div>시키는대로 했어 난..</div>
-            <div>시키는대.로 했어 난..</div>
+            <MainList/>
         </>
     );
 };

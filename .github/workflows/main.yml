@@ -1,4 +1,4 @@
-name: realproject
+name: where_cat
 on:
   push:
     branches:
