@@ -1,4 +1,4 @@
-name: real-project-week8
+name: where_cat
 on:
   push:
     branches:
@@ -31,8 +31,8 @@ jobs:
         with:
           args: --acl public-read --delete
         env:
-          AWS_S3_BUCKET: ${{ secrets.BUCKET_NAME }}
+          AWS_S3_BUCKET: ${{ secrets.AWS_STAGING_BUCKET_NAME }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: ${{ secrets.DISTRIBUTION_ID }}
+          DISTRIBUTION_ID: ${{ secrets.DISTRIBUTION_ID }}
           SOURCE_DIR: "build"
