@@ -5,6 +5,7 @@ const Main = () => {
     return (
         <>
             <MainList/>
+            <h1>cicd테스트</h1>
         </>
     );
 };
