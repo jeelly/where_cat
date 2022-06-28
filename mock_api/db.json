@@ -1,11 +1,8 @@
 {
-  "content": [
+  "posts": [
     {
-      "title": "아이폰팝니다.",
-      "price": "111,000",
-      "category": "전자제품",
-      "region": "서울",
-      "likeCount": 6,
+      "catName":"망치",
+      "healthStatus":"양호",
       "imageUrl": [
         {
           "imageUrl": "https://i.pinimg.com/564x/39/f3/5d/39f35ddfdca86a2fa16689dd6825e43b.jpg"
@@ -17,14 +14,11 @@
           "imageUrl": "https://i.pinimg.com/736x/0c/e4/76/0ce47643f1fb9e13177b72e3e39d9777.jpg"
         }
       ],
-      "id": 1
-    },
-    {
-      "title": "아이폰팝니다.",
-      "price": "111,000",
-      "category": "전자제품",
-      "region": "서울",
-      "likeCount": 6,
+      "id":1
+     },
+     {
+      "catName":"스패너",
+      "healthStatus":"양호",
       "imageUrl": [
         {
           "imageUrl": "https://i.pinimg.com/564x/39/f3/5d/39f35ddfdca86a2fa16689dd6825e43b.jpg"
@@ -36,14 +30,11 @@
           "imageUrl": "https://i.pinimg.com/736x/0c/e4/76/0ce47643f1fb9e13177b72e3e39d9777.jpg"
         }
       ],
-      "id": 2
-    },
-    {
-      "title": "아이폰팝니다.",
-      "price": "111,000",
-      "category": "전자제품",
-      "region": "서울",
-      "likeCount": 6,
+      "id":2
+     },
+     {
+      "catName":"나사",
+      "healthStatus":"알레르기",
       "imageUrl": [
         {
           "imageUrl": "https://i.pinimg.com/564x/39/f3/5d/39f35ddfdca86a2fa16689dd6825e43b.jpg"
@@ -55,46 +46,13 @@
           "imageUrl": "https://i.pinimg.com/736x/0c/e4/76/0ce47643f1fb9e13177b72e3e39d9777.jpg"
         }
       ],
-      "id": 3
-    },
+      "id":3
+     }
+],
+  "localFavor": [
     {
-      "title": "아이폰팝니다.",
-      "price": "111,000",
-      "category": "전자제품",
-      "region": "서울",
-      "likeCount": 6,
-      "imageUrl": [
-        {
-          "imageUrl": "https://i.pinimg.com/564x/39/f3/5d/39f35ddfdca86a2fa16689dd6825e43b.jpg"
-        },
-        {
-          "imageUrl": "https://i.pinimg.com/736x/4e/b3/bf/4eb3bf7dec34855c8e8a21b73203c121.jpg"
-        },
-        {
-          "imageUrl": "https://i.pinimg.com/736x/0c/e4/76/0ce47643f1fb9e13177b72e3e39d9777.jpg"
-        }
-      ],
-      "id": 4
-    },
-    {
-      "title": "아이폰팝니다.",
-      "price": "111,000",
-      "category": "전자제품",
-      "region": "서울",
-      "likeCount": 6,
-      "imageUrl": [
-        {
-          "imageUrl": "https://i.pinimg.com/564x/39/f3/5d/39f35ddfdca86a2fa16689dd6825e43b.jpg"
-        },
-        {
-          "imageUrl": "https://i.pinimg.com/736x/4e/b3/bf/4eb3bf7dec34855c8e8a21b73203c121.jpg"
-        },
-        {
-          "imageUrl": "https://i.pinimg.com/736x/0c/e4/76/0ce47643f1fb9e13177b72e3e39d9777.jpg"
-        }
-      ],
-      "id": 5
-    }
-  ],
-  "like": []
+    "userLocation":"수원시 파장동",
+    "localAvg":3.5
+  }
+]
 }
