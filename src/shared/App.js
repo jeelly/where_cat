@@ -8,6 +8,8 @@ import AppLayout from "../components/AppLayout";
 
 //Sub
 import Singup from "../pages/Singup";
+import FindUser from "../pages/FindUser";
+import Login from "../pages/Login";
 import PageNotFound from "../pages/PageNotFound";
 import Main from "../pages/Main";
 
@@ -25,6 +27,8 @@ function App() {
       <Routes>
         <Route path="/" element={isloaded && <Main />} />
         <Route path="/signup" element={<Singup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/finduser" element={<FindUser />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </AppLayout>
