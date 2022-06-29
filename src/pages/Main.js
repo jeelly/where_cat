@@ -6,13 +6,7 @@ const Main = () => {
         <>
             <MainList/>
             <h1>cicd테스트</h1>
-            <h1>cicd테스트</h1>
-            <h1>cicd테스트</h1>
-            <h1>cicd테스트</h1>
-            <h1>cicd테스트</h1>
-            <h1>cicd테스트</h1>
-            <h1>cicd테스트</h1>
-            <h1>cicd테스트</h1>
+            <h1>cicd테스트!6.29</h1>
         </>
     );
 };
