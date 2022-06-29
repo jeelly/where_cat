@@ -1,47 +1,40 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const initialState = {
-  user: [
-    {
-      userId: "test123",
-      nickName: "보람이테스트",
-      password: "test1234!",
-      confirmPassword: "test1234!",
-      phoneNum: "01049546299",
-      email: "930802qhfka@gmail.com",
-      userLocation: "전라북도 전주시 완산구 서신동",
-      favorability: "0",
-    },
-  ],
+//유저 회원가입
+export const signupDB = async (userInfo) => {
+  try {
+    const { data } = await axios.post(
+      "http://43.200.21.225/api/users/signup",
+      userInfo
+    );
+    console.log(data);
+    return data;
+  } catch (e) {
+    alert(e.response.data.errorMessage);
+  }
 };
 
-//유저 이메일 인증
-export const userEmail = createAsyncThunk(
-  "userEmail/userEmailCheck",
-  async (user_email) => {
-    try {
-      const response = await axios.post(
-        "http://43.200.104.97/api/users/mail",
-        user_email
-      );
-      console.log(response);
-      return response;
-    } catch (e) {
-      console.log(e);
-    }
+//유저 로그인
+export const loginDB = async (userInfo) => {
+  try {
+    const { data } = await axios.post(
+      "http://43.200.21.225/api/users/login",
+      userInfo
+    );
+    localStorage.setItem("userToken", data.token);
+    alert("토큰 저장 완료!");
+  } catch (e) {
+    alert(e.response.data.errorMessage);
   }
-);
+};
 
 export const userInfoSlice = createSlice({
   name: "user",
-  initialState: initialState,
-  reducers: {
-  },
-  extraReducers: {
-  }
+  initialState: [],
+  reducers: {},
+  extraReducers: {},
 });
 
-
-export const postActions = userInfoSlice.actions
-export default userInfoSlice.reducer
+export const postActions = userInfoSlice.actions;
+export default userInfoSlice.reducer;
