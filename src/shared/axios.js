@@ -10,4 +10,9 @@ const instance = axios.create({
 // const token = getCookie("is_login");
 // instance.defaults.headers.common["Authorization"] = `Bearer ${token}`; 
 
-export default instance;
+export default instance ;
+
+export const login_instance = axios.create({
+  baseURL: "http://localhost:5001",
+  headers: { "Content-Type": "application/json" },
+});

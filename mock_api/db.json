@@ -1,58 +1,56 @@
 {
-  "posts": [
+  "post": [
     {
-      "catName":"망치",
-      "healthStatus":"양호",
-      "imageUrl": [
+      "exhibit" : [
         {
-          "imageUrl": "https://i.pinimg.com/564x/39/f3/5d/39f35ddfdca86a2fa16689dd6825e43b.jpg"
+          "id":1,
+          "intro": {
+            "title":"전시회명",
+            "subtitle":"2021년 현대미술 소장품 특별전",
+            "thumnailImg":"https://t1.daumcdn.net/cfile/tistory/9946A4505F5817A60D",
+            "content":"이번 전시는 두번째로 개최되는 ~",
+            "imgURL":"https://t1.daumcdn.net/blogfile/fs11/23_blog_2008_07_13_10_37_48795c5e1d9b4?x-content-disposition=inline&filename=haeyongj_20.jpg",
+            "nickName":"홍길동",
+            "userInfo":"아모레퍼시픽 미술관 큐레이터"
+          },
+          "information": {
+            "title":"전시회명",
+            "subtitle":"2021년 현대미술 소장품 특별전",
+            "startData":"2022-12-12",
+            "endDate":"2022-12-25",
+            "LatLng":"37.5666103, 126.9783882",
+            "address":"서울 용산구 한강대로 100",
+            "phoneNum":"0260402345",
+            "openingHours":"매일 10:00 - 18:00",
+            "siteURL":"https://apma.amore.com",
+            "subinfo":"주차, 무선인터넷, 남녀화장실 구분"
+          }
         },
         {
-          "imageUrl": "https://i.pinimg.com/736x/4e/b3/bf/4eb3bf7dec34855c8e8a21b73203c121.jpg"
-        },
-        {
-          "imageUrl": "https://i.pinimg.com/736x/0c/e4/76/0ce47643f1fb9e13177b72e3e39d9777.jpg"
+          "id":2,
+          "intro": {
+            "title":"2전시회명",
+            "subtitle":"2021년 현대미술 소장품 특별전",
+            "thumnailImg":"https://t1.daumcdn.net/cfile/tistory/9946A4505F5817A60D",
+            "content":"이번 전시는 두번째로 개최되는 ~",
+            "imgURL":"https://t1.daumcdn.net/blogfile/fs11/23_blog_2008_07_13_10_37_48795c5e1d9b4?x-content-disposition=inline&filename=haeyongj_20.jpg",
+            "nickName":"홍길동",
+            "userInfo":"아모레퍼시픽 미술관 큐레이터"
+          },
+          "information": {
+            "title":"2전시회명",
+            "subtitle":"2021년 현대미술 소장품 특별전",
+            "startData":"2022-12-12",
+            "endDate":"2022-12-25",
+            "LatLng":"37.5666103, 126.9783882",
+            "address":"서울 용산구 한강대로 100",
+            "phoneNum":"0260402345",
+            "openingHours":"매일 10:00 - 18:00",
+            "siteURL":"https://apma.amore.com",
+            "subinfo":"주차, 무선인터넷, 남녀화장실 구분"
+          }
         }
-      ],
-      "id":1
-     },
-     {
-      "catName":"스패너",
-      "healthStatus":"양호",
-      "imageUrl": [
-        {
-          "imageUrl": "https://i.pinimg.com/564x/39/f3/5d/39f35ddfdca86a2fa16689dd6825e43b.jpg"
-        },
-        {
-          "imageUrl": "https://i.pinimg.com/736x/4e/b3/bf/4eb3bf7dec34855c8e8a21b73203c121.jpg"
-        },
-        {
-          "imageUrl": "https://i.pinimg.com/736x/0c/e4/76/0ce47643f1fb9e13177b72e3e39d9777.jpg"
-        }
-      ],
-      "id":2
-     },
-     {
-      "catName":"나사",
-      "healthStatus":"알레르기",
-      "imageUrl": [
-        {
-          "imageUrl": "https://i.pinimg.com/564x/39/f3/5d/39f35ddfdca86a2fa16689dd6825e43b.jpg"
-        },
-        {
-          "imageUrl": "https://i.pinimg.com/736x/4e/b3/bf/4eb3bf7dec34855c8e8a21b73203c121.jpg"
-        },
-        {
-          "imageUrl": "https://i.pinimg.com/736x/0c/e4/76/0ce47643f1fb9e13177b72e3e39d9777.jpg"
-        }
-      ],
-      "id":3
-     }
-],
-  "localFavor": [
-    {
-    "userLocation":"수원시 파장동",
-    "localAvg":3.5
-  }
+      ]
+    }
 ]
 }
