@@ -1,47 +1,69 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import ExhibitInformationItem from '../components/listpage/ExhibitInformationItem';
 import ExhibitIntroList from '../components/listpage/ExhibitIntroList';
-import { useDispatch, useSelector } from "react-redux";
-import ExhibitIntroItem from '../components/listpage/ExhibitIntroItem';
 import ExhibitInformationList from '../components/listpage/ExhibitInformationList';
+import '../css/detail.css'
+// const Detail = () => {
+//     const { id } = useParams();
+//     const [tab, setTab] = useState(<ExhibitIntroList id={id}/>)
+//     console.log(tab)
+//     console.log(tab === <ExhibitIntroList id={id}/>)
+//     console.log(tab === <ExhibitIntroList id={id}/>)
+
+//     return (
+//         <>
+//             <button className={tab===<ExhibitIntroList id={id}/> ? "is-active" : ""}  onClick={()=> {
+//                 setTab(<ExhibitIntroList id={id}/>)
+//             }}>
+//                 <h1>전시-소개</h1> 
+//             </button>
+//             <button className={tab===<ExhibitIntroList id={id}/> ? "is-active" : ""}  onClick={()=> {
+//                 setTab(<ExhibitInformationList id={id}/>)
+//             }}>
+//                 <h1>전시-안내</h1>
+//             </button>
+//             {tab}
+//         </>
+//     );
+// };
+
 const Detail = () => {
     const { id } = useParams();
-    // const posts = useSelector((state) => state.post.exhibit);
-    // const post = posts.filter((post, l) => post.id === parseInt(id))
-    // const new_post = [];
-    // new_post.push(...post)
-    // console.log(...post)
-    return (
-        <>
-            {/*
-            <ul>
-                <li>{post[0]?.intro.title}</li>
-                <li>{post[0]?.intro.subtitle}</li>
-                <li><img src={post[0]?.intro.thumnailImg} alt={post[0]?.intro.title}/></li>
-                <li>{post[0]?.intro.content}</li>
-                <li><img src={post[0]?.intro.imgURL} alt={post[0]?.intro.title}/></li>
-                <li>{post[0]?.intro.nickName}</li>
-                <li>{post[0]?.intro.userInfo}</li>
-            </ul>
-            
-            <ul>
-                <li>{post[0]?.information.title}</li> 
-                <li>{post[0]?.information.subtitle}</li> 
-                <li>{post[0]?.information.startData}</li> 
-                <li>{post[0]?.information.endData}</li> 
-                <li>{post[0]?.information.address}</li> 
-                <li>{post[0]?.information.subInfo}</li> 
-                <li>{post[0]?.information.openingHours}</li> 
-                <li>{post[0]?.information.phoneNum}</li> 
-                <li>{post[0]?.information.siteURL}</li> 
-            </ul> */}
-            <h1>전시-소개</h1>
-            <ExhibitIntroList id={id}/>
-            <h1>전시-안내</h1>
-            <ExhibitInformationList id={id}/>
-        </>
-    );
-};
+    const [activeIndex, setActiveIndex] = useState(0);
 
+    const tabClickHandler=(index)=>{
+        setActiveIndex(index)
+    }
+
+    const tabContArr=[
+        {
+            tabTitle:(
+                <button className={activeIndex===0 ? "is-active" : ""} onClick={()=>tabClickHandler(0)}>전시-소개</button>
+            ),
+            tabCont:(
+                <ExhibitIntroList id={id}/>
+            )
+        },
+        {
+            tabTitle:(
+                <button className={activeIndex===1 ? "is-active" : ""} onClick={()=>tabClickHandler(1)}>전시-안내</button>
+            ),
+            tabCont:(
+                <ExhibitInformationList id={id}/>
+            )
+        }
+    ];
+    
+
+    return (<>
+        <ul className="tabs is-boxed">
+            {tabContArr.map((section, index)=>{
+                return section.tabTitle
+            })}
+        </ul>
+        <div>
+	    { tabContArr[activeIndex].tabCont }
+        </div>
+    </>)
+}
 export default Detail;
