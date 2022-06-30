@@ -5,25 +5,25 @@ import instance from "../../shared/axios";
 //미들웨어
 
 // 게시글 불러오기
-export const loadpostsDB = (page) => {
-  return async function (dispatch, getState) {
-    const response = await instance.get(`/posts`);
-    dispatch(loadposts(response.data));
+export const loadpostDB = () => {
+  return async function (dispatch) {
+    const response = await instance.get(`/post`);
+    dispatch(loadpost(response.data[0].exhibit));
   };
 };
 
 const userSlice = createSlice({
-  name: "posts",
+  name: "post",
   initialState: {
-    list: [],
+    exhibit:[] ,
   },
   reducers: {
-    loadposts: (state, action) => {
+    loadpost: (state, action) => {
       console.log(action.payload)
-      state.list = [...action.payload];
+      state.exhibit = [...action.payload];
     },
   },
 });
 
-export const { loadposts } = userSlice.actions;
+export const { loadpost } = userSlice.actions;
 export default userSlice.reducer;
