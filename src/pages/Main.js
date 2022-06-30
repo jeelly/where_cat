@@ -1,14 +1,13 @@
 import React from 'react';
-import MainList from '../components/main/MainList';
+import { Link } from 'react-router-dom';
+import ExhibitMainList from '../components/main/ExhibitMainList';
+import ListPage from './ListPage';
 
 const Main = () => {
     return (
         <>
-            <MainList/>
-            <h1>cicd테스트</h1>
-            <h1>cicd테스트!6.29</h1>
-            <h1>cicd테스트!6.29</h1>
-            <h1>cicd테스트!6.29</h1>
+            <ExhibitMainList main={true} />
+            <Link to="/listPage">전시회 더보기</Link>
         </>
     );
 };
